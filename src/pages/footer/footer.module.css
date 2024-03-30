@@ -1,10 +1,10 @@
-.main {
+.main2 {
   width: 100%;
   height: 5vh;
   background-color: #2e0052;
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Adjusted for space between elements */
+  justify-content: center; /* Adjusted for space between elements */
   color: #fff;
   z-index: 9999;
   position: relative;
@@ -15,8 +15,14 @@
   display: none; /* Initially hide the links */
 }
 
+@media (min-width: 601px) {
+  .main1 {
+    display: none;
+  }
+}
+
 @media (max-width: 600px) {
-  .main {
+  .main1 {
     width: 100%;
     height: 5vh;
     display: block;
@@ -24,7 +30,11 @@
     padding: 0px;
   }
 
-  .line{
+  .main2 {
+    display: none;
+  }
+
+  .line {
     width: 100%;
     height: 1px;
     background-color: #2e0052;
@@ -34,15 +44,15 @@
   .links {
     display: flex; /* Display the links */
     gap: 120px; /* Add gap between links */
-    color: #2E0052;
+    color: #2e0052;
     justify-content: center;
   }
 
-  .links span{
+  .links span {
     font-size: 30px;
   }
 
-  .textInner{
+  .textInner {
     display: flex;
     align-items: center;
     justify-content: center;

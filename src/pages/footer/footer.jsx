@@ -14,24 +14,39 @@ function Footer() {
   }, [token]);
 
   return (
-    <div
-      className={footerCss.main}
-      style={{ backgroundColor: !token ? "#2E0052" : "#fff" }}
-    >
-      <div className={footerCss.line}></div>
-      {token ? (
-        <div className={footerCss.links}>
-          <span class="material-symbols-outlined" onClick={() => navigate("/")}>home</span>
-          <span class="material-symbols-outlined" onClick={() => navigate("/cart")}>add_shopping_cart</span>
-          <span class="material-symbols-outlined">person_add</span>
-        </div>
-      ) : (
-        <div className={footerCss.textInner}>
-          Musicart | All rights reserved
-        </div>
-      )}
-      <div className={footerCss.text}>Musicart | All rights reserved</div>
-    </div>
+    <>
+      <div
+        className={footerCss.main1}
+        style={{ backgroundColor: !token ? "#2E0052" : "#fff" }}
+      >
+        <div className={footerCss.line}></div>
+        {token ? (
+          <div className={footerCss.links}>
+            <span
+              class="material-symbols-outlined"
+              onClick={() => navigate("/")}
+            >
+              home
+            </span>
+            <span
+              class="material-symbols-outlined"
+              onClick={() => navigate("/cart")}
+            >
+              add_shopping_cart
+            </span>
+            <span class="material-symbols-outlined">person_add</span>
+          </div>
+        ) : (
+          <div className={footerCss.textInner}>
+            Musicart | All rights reserved
+          </div>
+        )}
+        <div className={footerCss.text}>Musicart | All rights reserved</div>
+      </div>
+      <div className={footerCss.main2}>
+        <div className={footerCss.text}>Musicart | All rights reserved</div>
+      </div>
+    </>
   );
 }
 

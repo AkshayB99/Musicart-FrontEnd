@@ -3,10 +3,12 @@ import viCss from "./viewInvoice.module.css";
 import logo from "../../assets/logo.png";
 import Cookies from "universal-cookie";
 import { useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const cookies = new Cookies();
 
 function viewInvoice() {
+  const navigate = useNavigate();
   const token = cookies.get("token");
   const [data, setData] = useState([]);
   const { id } = useParams();
@@ -87,8 +89,8 @@ function viewInvoice() {
             <p className={viCss.headerTxt2}>Home/View Invoice</p>
           </div>
         </dir>
-        <dir className={viCss.backBtn}>
-          <button>Back to Home</button>
+        <dir className={viCss.backBtn} onClick={() => navigate("/invoice")}>
+          <button>Back to Invoice</button>
         </dir>
         <dir className={viCss.body}>
           <div className={viCss.upper}>
@@ -137,7 +139,7 @@ function viewInvoice() {
                 <h3>Order Summary</h3>
                 <div className={viCss.itemRate}>
                   <p>Item:</p>
-                  <p>₹{(data?.newInvoice?.[0]?.totalAmount) - 45}.00</p>
+                  <p>₹{data?.newInvoice?.[0]?.totalAmount - 45}.00</p>
                 </div>
                 <div className={viCss.itemRate}>
                   <p>Delivery:</p>
@@ -146,7 +148,7 @@ function viewInvoice() {
                 <div className={viCss.midLine}></div>
                 <div className={viCss.totalPrice}>
                   <h3>Total Price</h3>
-                  <h3>₹{(data?.newInvoice?.[0]?.totalAmount)}.00</h3>
+                  <h3>₹{data?.newInvoice?.[0]?.totalAmount}.00</h3>
                 </div>
               </div>
             </div>

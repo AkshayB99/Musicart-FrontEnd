@@ -14,7 +14,8 @@ function ViewItem() {
   const viewId = searchParams.get("view");
   const [data, setData] = useState([]);
   const [user, setUser] = useState([]);
-  const [mainImage, setMainImage] = useState(""); // State to hold main image URL
+  const [mainImage, setMainImage] = useState(""); 
+  const [reloading, setReloading] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -59,7 +60,7 @@ function ViewItem() {
 
     fetchData();
     fetchDataAndItem();
-  }, []);
+  }, [reloading]);
 
   // Function to handle click on small image
   const handleSmallImageClick = (imageUrl) => {
@@ -77,6 +78,52 @@ function ViewItem() {
   function brand() {
     return data?.name?.shortname.split(" ")[0];
   }
+
+  const handleCartClick = async (e) => {
+    e.stopPropagation();
+    try {
+      const responce = await fetch(
+        `${import.meta.env.VITE_URL}api/v1/user/cart`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+          body: JSON.stringify({ itemId: data?.id }),
+        }
+      );
+      const responseData = await responce.json();
+      if (responseData.status === "success") {
+        setReloading(!reloading)
+      }
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
+
+  const handleBuyNow = async (e) => {
+    e.stopPropagation();
+    try {
+      const responce = await fetch(
+        `${import.meta.env.VITE_URL}api/v1/user/cart`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+          body: JSON.stringify({ itemId: data?.id }),
+        }
+      );
+      const responseData = await responce.json();
+      if (responseData.status === "success") {
+        navigate("/cart");
+      }
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
 
   return (
     <div>
@@ -151,8 +198,8 @@ function ViewItem() {
             <p className={vCss.avaP}>Available - {data?.availability}</p>
             <p className={vCss.brand}>Brand - {brand()}</p>
             <div className={vCss.buttons}>
-              <button className={vCss.addToCart}>Add to cart</button>
-              <button className={vCss.buyNow}>Buy Now</button>
+              <button className={vCss.addToCart} onClick={(e) => handleCartClick(e)}>Add to cart</button>
+              <button className={vCss.buyNow} onClick={(e) => handleBuyNow(e)}>Buy Now</button>
             </div>
           </div>
         </div>
