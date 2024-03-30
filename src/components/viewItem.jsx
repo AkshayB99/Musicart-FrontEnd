@@ -66,7 +66,7 @@ function ViewItem() {
   }, [reloading]);
 
   const settings = {
-    dots: false,
+    dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
@@ -234,7 +234,6 @@ function ViewItem() {
                 key={index}
                 src={imgUrl}
                 className={vCss.smallImgs2Img}
-                onClick={() => handleSmallImageClick(imgUrl)}
               />
             ))}
           </Slider>
