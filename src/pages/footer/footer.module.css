@@ -43,7 +43,7 @@
 
   .links {
     display: flex; /* Display the links */
-    gap: 120px; /* Add gap between links */
+    gap: 80px; /* Add gap between links */
     color: #2e0052;
     justify-content: center;
   }

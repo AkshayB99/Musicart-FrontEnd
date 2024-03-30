@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
-import Cookies from "universal-cookie";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import vCss from "./viewItem.module.css";
 import logo from "../assets/logo.png";
+import { useLocation, useNavigate } from "react-router-dom";
+import Cookies from "universal-cookie";
 
 const cookies = new Cookies();
 
@@ -14,7 +17,7 @@ function ViewItem() {
   const viewId = searchParams.get("view");
   const [data, setData] = useState([]);
   const [user, setUser] = useState([]);
-  const [mainImage, setMainImage] = useState(""); 
+  const [mainImage, setMainImage] = useState("");
   const [reloading, setReloading] = useState(false);
 
   useEffect(() => {
@@ -62,7 +65,14 @@ function ViewItem() {
     fetchDataAndItem();
   }, [reloading]);
 
-  // Function to handle click on small image
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
+
   const handleSmallImageClick = (imageUrl) => {
     setMainImage(imageUrl);
   };
@@ -95,7 +105,7 @@ function ViewItem() {
       );
       const responseData = await responce.json();
       if (responseData.status === "success") {
-        setReloading(!reloading)
+        setReloading(!reloading);
       }
     } catch (error) {
       console.error("Error fetching data:", error);
@@ -127,7 +137,7 @@ function ViewItem() {
 
   return (
     <div>
-      <h2 className={vCss.main}>
+      <div className={vCss.main}>
         <div className={vCss.header}>
           <div className={vCss.left}>
             <img src={logo} className={vCss.logoImg} />
@@ -152,10 +162,16 @@ function ViewItem() {
           <button className={vCss.backBtn} onClick={() => navigate("/")}>
             Back to product
           </button>
+          <div className={vCss.backBtn2} onClick={() => navigate("/")}>
+            <span className="material-symbols-outlined">arrow_back</span>
+          </div>
         </div>
         <div className={vCss.pFullNameArea}>
           <p className={vCss.pFullName}>
             {data?.name?.fullname} ({data?.color})
+          </p>
+          <p className={vCss.pFullName2}>
+            {data?.name?.shortname} ({data?.color})
           </p>
         </div>
         <div className={vCss.content}>
@@ -198,12 +214,68 @@ function ViewItem() {
             <p className={vCss.avaP}>Available - {data?.availability}</p>
             <p className={vCss.brand}>Brand - {brand()}</p>
             <div className={vCss.buttons}>
-              <button className={vCss.addToCart} onClick={(e) => handleCartClick(e)}>Add to cart</button>
-              <button className={vCss.buyNow} onClick={(e) => handleBuyNow(e)}>Buy Now</button>
+              <button
+                className={vCss.addToCart}
+                onClick={(e) => handleCartClick(e)}
+              >
+                Add to cart
+              </button>
+              <button className={vCss.buyNow} onClick={(e) => handleBuyNow(e)}>
+                Buy Now
+              </button>
             </div>
           </div>
         </div>
-      </h2>
+        <div className={vCss.content2}>
+          <div className={vCss.conLeft2}>
+          <Slider {...settings} className={vCss.smallImgs2}>
+            {Object.values(data?.imageUrl || {}).map((imgUrl, index) => (
+              <img
+                key={index}
+                src={imgUrl}
+                className={vCss.smallImgs2Img}
+                onClick={() => handleSmallImageClick(imgUrl)}
+              />
+            ))}
+          </Slider>
+          </div>
+          <div className={vCss.conRight2}>
+            <div className={vCss.itemName2}>
+              <p>{data?.name?.shortname}</p>
+            </div>
+            <div className={vCss.itemRatting2}>
+              {generateStars(data?.ratings?.rating).map((star, index) => (
+                <span className={vCss.rattingStars2} key={index}>
+                  {star}
+                </span>
+              ))}
+              <p className={vCss.rattingNo2}>
+                ({data?.ratings?.ratingNo} Customer reviews)
+              </p>
+            </div>
+            <div className={vCss.pirceDiv2}>
+              <p className={vCss.pirce2}>Price - ₹ {data?.price}</p>
+            </div>
+            <div className={vCss.aboutItemDiv2}>
+              <p className={vCss.aboutItemHead2}>About this item</p>
+              <p className={vCss.aboutItem2}>{data?.description}</p>
+            </div>
+            <p className={vCss.avaP2}>Available - {data?.availability}</p>
+            <p className={vCss.brand2}>Brand - {brand()}</p>
+            <div className={vCss.buttons2}>
+              <button
+                className={vCss.addToCart2}
+                onClick={(e) => handleCartClick(e)}
+              >
+                Add to cart
+              </button>
+              <button className={vCss.buyNow2} onClick={(e) => handleBuyNow(e)}>
+                Buy Now
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

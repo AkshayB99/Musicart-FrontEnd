@@ -91,6 +91,7 @@ function viewInvoice() {
         </dir>
         <dir className={viCss.backBtn} onClick={() => navigate("/invoice")}>
           <button>Back to Invoice</button>
+          <span className="material-symbols-outlined">arrow_back</span>
         </dir>
         <dir className={viCss.body}>
           <div className={viCss.upper}>

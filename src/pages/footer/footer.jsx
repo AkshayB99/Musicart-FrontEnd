@@ -34,6 +34,7 @@ function Footer() {
             >
               add_shopping_cart
             </span>
+            <span class="material-symbols-outlined" onClick={() => navigate("/invoice")}>edit_document</span>
             <span class="material-symbols-outlined">person_add</span>
           </div>
         ) : (

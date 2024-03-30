@@ -175,11 +175,12 @@
 
   .itemDiv{
     padding-left: 10px;
+    width: 100%;
   }
 
   .itemDiv p {
     margin-left: 0px;
-    width: 88%;
+    width: 250px;
   }
 
   .itemDiv button{

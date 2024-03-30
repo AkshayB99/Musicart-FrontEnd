@@ -56,7 +56,7 @@
   margin-right: 60px;
 }
 
-.cartText{
+.cartText {
   margin-left: 5px;
 }
 
@@ -65,23 +65,23 @@
   font-size: 16px;
 }
 
-.backBtnArea{
+.backBtnArea {
   margin-top: 10px;
   width: 100%;
   height: 40px;
 }
 
-.backBtn{
+.backBtn {
   width: 120px;
   height: 30px;
   border: none;
   border-radius: 12px;
   margin-left: 50px;
-  background-color: #2E0052;
+  background-color: #2e0052;
   color: #fff;
 }
 
-.pFullNameArea{
+.pFullNameArea {
   margin-top: 5px;
   width: 100%;
   height: 40px;
@@ -91,20 +91,19 @@
   margin-left: 50px;
 }
 
-.content{
+.content {
   width: 100%;
   height: 500px;
   display: flex;
- 
 }
 
-.conLeft{
+.conLeft {
   width: 50%;
   height: 500px;
   display: flex;
 }
 
-.smallImgs{
+.smallImgs {
   width: 20%;
   height: 500px;
   display: flex;
@@ -112,7 +111,7 @@
   align-items: end;
 }
 
-.smallImgs img{
+.smallImgs img {
   width: 80px;
   height: 100px;
   margin-bottom: 15px;
@@ -121,11 +120,11 @@
   border-radius: 15px;
 }
 
-.smallImgs img:first-child{
+.smallImgs img:first-child {
   margin-top: 12px;
 }
 
-.showImgs{
+.showImgs {
   margin-top: 11px;
   display: flex;
   align-items: center;
@@ -136,23 +135,23 @@
   height: 450px;
 }
 
-.conRight{
+.conRight {
   width: 50%;
   height: 500px;
   padding-left: 30px;
   padding-top: 20px;
 }
 
-.itemRatting{
+.itemRatting {
   display: flex;
   font-size: 16px;
 }
 
-.rattingNo{
+.rattingNo {
   padding-left: 10px;
 }
 
-.pirceDiv{
+.pirceDiv {
   margin-top: 20px;
   font-size: 20px;
 }
@@ -162,43 +161,219 @@
   background-color: antiquewhite;
 } */
 
-.aboutItemHead{
+.aboutItemHead {
   font-size: 18px;
 }
 
-.aboutItem{
+.aboutItem {
   font-size: 14px;
 }
 
-.avaP{
+.avaP {
   margin-top: 20px;
   font-size: 16px;
 }
 
-.brand{
+.brand {
   margin-top: 4px;
   font-size: 16px;
 }
 
-.buttons{
+.buttons {
   margin-top: 15px;
 }
 
-.addToCart{
+.addToCart {
   width: 180px;
   height: 35px;
-  background-color: #FFD600;
+  background-color: #ffd600;
   border: none;
   border-radius: 50px;
   font-size: 16px;
 }
 
-.buyNow{
+.buyNow {
   width: 180px;
   height: 35px;
-  background-color: #FFB800;
+  background-color: #ffb800;
   border: none;
   border-radius: 50px;
   font-size: 16px;
   margin-left: 10px;
 }
+
+.backBtn2{
+  display: none;
+}
+
+.pFullName2{
+  display: none;
+}
+
+.content2{
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .main {
+    height: 95vh;
+  }
+
+  .header {
+    background-color: #2e0052;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    height: 6vh;
+  }
+
+  .left {
+    margin-left: 15px;
+  }
+
+  .header h3 {
+    color: #fff;
+  }
+
+  .headerText {
+    display: none;
+  }
+
+  .cartIn {
+    display: none;
+  }
+
+  .backBtnArea {
+    margin-top: 0;
+  }
+
+  .backBtn {
+    display: none;
+  }
+
+  .backBtn2 {
+    display: block;
+    width: 32px;
+    height: 4vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    margin-left: 20px;
+    box-shadow: 4px 2px 7px 0px rgb(128, 123, 123);
+  }
+
+  .pFullNameArea {
+    margin: 0;
+    height: 3vh;
+  }
+
+  .pFullName {
+    display: none;
+  }
+
+  .pFullName2 {
+    display: block;
+    font-size: 16px;
+  }
+
+  .content {
+    display: none;
+  }
+
+  .content2 {
+    display: block;
+    overflow: hidden;
+  }
+
+  .conRight2 {
+    flex: 1;
+    padding: 0 10px;
+  }
+
+  .itemName2 {
+    margin-top: 10px;
+  }
+
+  .itemName2 p {
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  .itemRatting2 {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+  }
+
+  .rattingStars2 {
+    color: #f0ad4e;
+  }
+
+  .rattingNo2 {
+    margin-left: 5px;
+  }
+
+  .pirceDiv2 {
+    margin-top: 10px;
+  }
+
+  .pirce2 {
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  .aboutItemDiv2 {
+    margin-top: 10px;
+  }
+
+  .aboutItemHead2 {
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  .aboutItem2 {
+    display: none;
+  }
+
+  .avaP2,
+  .brand2 {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+
+  .buttons2 {
+    margin-top: 20px;
+  }
+
+  .addToCart2,
+  .buyNow2 {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .addToCart2 {
+    background-color: #ffd600;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+
+  .buyNow2 {
+    background-color: #ffb800;;
+    color: #fff;
+  }
+
+  .smallImgs2{
+    height: 40vh;
+  }
+
+  .smallImgs2 img{
+    width: 400px;
+    height: 400px;
+  }
+}
+
