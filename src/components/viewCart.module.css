@@ -1,0 +1,394 @@
+.main {
+  width: 100%;
+  height: 89vh;
+}
+
+.header {
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+  margin-left: 0px;
+  width: 100%;
+}
+
+.left {
+  width: 50%;
+  display: flex;
+  margin-left: 50px;
+}
+
+.right {
+  width: 50%;
+  display: flex;
+  justify-content: end;
+}
+
+.header h3 {
+  color: #2e0052;
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.headerText {
+  margin: 6px 0 0 15px;
+  color: #2e0052;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.logoImg {
+  width: 35px;
+  height: 35px;
+}
+
+.cartIn {
+  color: #fff;
+  height: 34px;
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1d7000;
+  font-size: 14px;
+  border-radius: 20px;
+  margin-right: 60px;
+}
+
+.cartText {
+  margin-left: 5px;
+}
+
+.cartNo {
+  margin-left: 4px;
+  font-size: 16px;
+}
+
+.backBtnArea {
+  margin-top: 25px;
+  width: 100%;
+  height: 40px;
+}
+
+.backBtn {
+  width: 120px;
+  height: 30px;
+  border: none;
+  border-radius: 12px;
+  margin-left: 50px;
+  background-color: #2e0052;
+  color: #fff;
+}
+
+.items {
+  width: 100%;
+  height: 440px;
+  overflow-y: auto;
+  padding-left: 100px;
+  padding-top: 30px;
+  scrollbar-width: thin;
+  scrollbar-color: #b2b2b2 transparent;
+}
+
+.item {
+  width: 100%;
+  height: 180px;
+  display: flex;
+}
+
+.itemImg {
+  width: 120px;
+  height: 120px;
+  border: 2px solid black;
+  border-radius: 9px;
+}
+
+.second {
+  margin-left: 30px;
+  width: 300px;
+}
+
+.second p {
+  color: #a2a2a2;
+}
+
+.shortName {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.prices {
+  margin-left: 20px;
+}
+
+.priceText {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.quantity {
+  margin-left: 90px;
+}
+
+.total {
+  margin-left: 70px;
+  width: 80px;
+}
+
+.botLine {
+  width: 100%;
+  height: 2px;
+  margin-bottom: 20px;
+  background-color: #a2a2a2;
+}
+
+.bottomTotal {
+  margin: 10px 0 0 0px;
+  width: 100%;
+  display: flex;
+}
+
+.btmItem {
+  margin-left: 250px;
+  font-weight: 600;
+  display: flex;
+}
+
+.btmTotal {
+  margin-left: 550px;
+  font-size: 18px;
+  font-weight: 600;
+  display: flex;
+}
+
+.Contents {
+  display: flex;
+}
+
+.btleft {
+  width: 70%;
+}
+
+.btRight {
+  width: 30%;
+  height: 480px;
+  padding-left: 20px;
+}
+
+.TotHead {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.totMrp {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.totMrp span {
+  margin-left: 181px;
+}
+
+.totDis {
+  margin-top: 6px;
+  font-size: 18px;
+}
+
+.totDis span {
+  margin-left: 120px;
+}
+
+.totCon {
+  margin-top: 6px;
+  font-size: 18px;
+}
+
+.totCon span {
+  margin-left: 112px;
+}
+
+.totTotalAmt {
+  margin-top: 190px;
+}
+
+.totTotalAmt span {
+  margin-left: 100px;
+}
+
+.placeOrd {
+  width: 300px;
+  height: 43px;
+  border: none;
+  border-radius: 6px;
+  background-color: #ffd600;
+  margin-left: 35px;
+  margin-top: 20px;
+  font-size: 19px;
+}
+
+.delBtn {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.delBtn span {
+  cursor: pointer;
+}
+
+@media (min-width: 601px) {
+  /* Hide backBtn2 and show backBtn above 600px */
+  .backBtn2 {
+    display: none;
+  }
+
+  .backBtn {
+    display: block;
+  }
+}
+
+@media (max-width: 600px) {
+  .main {
+    height: 95vh;
+  }
+
+  .header {
+    width: 100%;
+    background-color: #2e0052;
+    display: flex;
+    align-items: center;
+    height: 6vh;
+  }
+
+  .left {
+    margin-top: 0;
+    margin-left: 20px;
+  }
+
+  .header h3 {
+    color: #fff;
+    font-weight: normal;
+  }
+
+  .headerText {
+    display: none;
+  }
+
+  .right {
+    display: none;
+  }
+
+  .backBtnArea {
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    height: 5vh;
+  }
+
+  .backBtn {
+    display: none;
+  }
+
+  .backBtn2 {
+    margin-left: 20px;
+    background-color: #fff;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .Contents {
+    display: block;
+  }
+
+  .btleft {
+    width: 100%;
+  }
+
+  .items {
+    height: 55vh;
+    margin-bottom: 0;
+    padding-left: 5px;
+  }
+
+  .btRight {
+    width: 100%;
+    height: 28vh;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btmItem {
+    display: none;
+  }
+
+  .btmTotal {
+    display: none;
+  }
+
+  .botLine {
+    display: none;
+  }
+
+  .totTotalAmt {
+    margin-top: 10px;
+  }
+
+  .TotHead{
+    margin-top: 5px;
+    margin-bottom: 0;
+  }
+
+  .totMrp{
+    margin-top: 5px;
+  }
+  .totTotalAmt{
+    margin-top: 5px;
+  }
+  .totTotalAmt span{
+    margin-left: 30px;
+  }
+  .placeOrd{
+    margin-top: 5px;
+    margin-left: 0;
+  }
+
+  .second{
+    margin-left: 10px;
+  }
+
+  .shortName{
+    font-size: 15px;
+  }
+
+  .color{
+    font-size: 13px;
+  }
+
+  .stock{
+    font-size: 13px;
+  }
+
+  .prices{
+    margin-left: 0px;
+    font-size: 15px;
+  }
+
+  .quantity{
+    display: none;
+  }
+
+  .total{
+    display: none;
+  }
+
+  .delBtn{
+    display: none;
+  }
+}

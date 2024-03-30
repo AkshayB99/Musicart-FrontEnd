@@ -1,0 +1,204 @@
+.main {
+  width: 100%;
+  height: 89vh;
+}
+
+.header {
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+  margin-left: 0px;
+  width: 100%;
+}
+
+.left {
+  width: 50%;
+  display: flex;
+  margin-left: 50px;
+}
+
+.right {
+  width: 50%;
+  display: flex;
+  justify-content: end;
+}
+
+.header h3 {
+  color: #2e0052;
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.headerText {
+  margin: 6px 0 0 15px;
+  color: #2e0052;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.logoImg {
+  width: 35px;
+  height: 35px;
+}
+
+.cartIn {
+  color: #fff;
+  height: 34px;
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1d7000;
+  font-size: 14px;
+  border-radius: 20px;
+  margin-right: 60px;
+}
+
+.cartText{
+  margin-left: 5px;
+}
+
+.cartNo {
+  margin-left: 4px;
+  font-size: 16px;
+}
+
+.backBtnArea{
+  margin-top: 10px;
+  width: 100%;
+  height: 40px;
+}
+
+.backBtn{
+  width: 120px;
+  height: 30px;
+  border: none;
+  border-radius: 12px;
+  margin-left: 50px;
+  background-color: #2E0052;
+  color: #fff;
+}
+
+.pFullNameArea{
+  margin-top: 5px;
+  width: 100%;
+  height: 40px;
+}
+
+.pFullName {
+  margin-left: 50px;
+}
+
+.content{
+  width: 100%;
+  height: 500px;
+  display: flex;
+ 
+}
+
+.conLeft{
+  width: 50%;
+  height: 500px;
+  display: flex;
+}
+
+.smallImgs{
+  width: 20%;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.smallImgs img{
+  width: 80px;
+  height: 100px;
+  margin-bottom: 15px;
+  margin-right: 10px;
+  border: 3px solid black;
+  border-radius: 15px;
+}
+
+.smallImgs img:first-child{
+  margin-top: 12px;
+}
+
+.showImgs{
+  margin-top: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid black;
+  border-radius: 10px;
+  width: 80%;
+  height: 450px;
+}
+
+.conRight{
+  width: 50%;
+  height: 500px;
+  padding-left: 30px;
+  padding-top: 20px;
+}
+
+.itemRatting{
+  display: flex;
+  font-size: 16px;
+}
+
+.rattingNo{
+  padding-left: 10px;
+}
+
+.pirceDiv{
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+/* .aboutItemDiv{
+  height: 200px;
+  background-color: antiquewhite;
+} */
+
+.aboutItemHead{
+  font-size: 18px;
+}
+
+.aboutItem{
+  font-size: 14px;
+}
+
+.avaP{
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.brand{
+  margin-top: 4px;
+  font-size: 16px;
+}
+
+.buttons{
+  margin-top: 15px;
+}
+
+.addToCart{
+  width: 180px;
+  height: 35px;
+  background-color: #FFD600;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+}
+
+.buyNow{
+  width: 180px;
+  height: 35px;
+  background-color: #FFB800;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  margin-left: 10px;
+}

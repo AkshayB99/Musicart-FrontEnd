@@ -1,0 +1,196 @@
+.main {
+  width: 100%;
+  height: 89vh;
+}
+
+.header {
+  width: 100%;
+  height: 60px;
+  display: flex;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  margin-left: 50px;
+  width: 77%;
+}
+
+.headerLogo {
+  width: 45px;
+  height: 45px;
+}
+
+.headerTxt {
+  font-size: 24px;
+}
+
+.headerTxt2 {
+  font-size: 16px;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.backBtn button {
+  margin-top: 10px;
+  margin-left: 60px;
+  width: 150px;
+  height: 30px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  background-color: #2e0052;
+  color: #fff;
+}
+
+.body {
+  width: 100%;
+  height: 500px;
+}
+
+.upper {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lower {
+  width: 100%;
+  height: 450px;
+  display: flex;
+}
+
+.lowerLeft {
+  width: 70%;
+  height: 500px;
+  padding-left: 70px;
+  padding-top: 20px;
+}
+
+.lowerLeft1In {
+  display: flex;
+}
+
+.lowerLeft1In h3 {
+  color: #b52b00;
+  font-size: 20px;
+}
+
+.lowerLeft1Add {
+  margin-left: 300px;
+}
+
+.lowerLeft1span {
+  margin-top: 20px;
+  width: 90%;
+  height: 2px;
+  background-color: #e1e1e1;
+}
+
+.lowerLeft2In {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.lowerLeft2In h3 {
+  color: #b52b00;
+  font-size: 20px;
+}
+
+.lowerLeft2In p {
+  margin-left: 290px;
+  width: 200px;
+  height: 24px;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lowerLeft3 {
+  display: flex;
+  margin-top: 20px;
+}
+
+.lowerLeft3 h3 {
+  color: #b52b00;
+  width: 50%;
+}
+
+.lowerLeft3Item{
+  width: 40%;
+  height: 280px;
+  overflow-y: auto;
+}
+
+.lowerLeft3Item::-webkit-scrollbar {
+  display: none; /* Hide the scrollbar */
+}
+
+.lowerLeft3ItemIn {
+  margin-top: 10px;
+  display: flex;
+}
+
+.lowerLeft3ItemIn img{
+  width: 100px;
+  height: 100px;
+}
+
+.lowerLeft3ItemIn2 p{
+  margin-left: 15px;
+  font-size: 15px;
+  color: #8a8989;
+}
+
+.lowerRight{
+  width: 25%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lowerRightBox{
+  width: 350px;
+  height: 220px;
+  border: 2px solid #8a8989;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.lowerRightBox h3{
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.itemRate{
+  display: flex;
+  font-size: 17px;
+  color: #8a8989;
+  margin-top: 10px;
+}
+
+.itemRate p:first-child{
+  width: 230px;
+}
+
+.midLine{
+  margin-top: 20px;
+  width: 100%;
+  height: 2px;
+  background-color: #cdcbcb;
+}
+
+.totalPrice{
+  display: flex;
+  padding: 10px;
+  color: #b52b00;
+}
+
+.totalPrice h3:first-child{
+  width: 190px;
+}
