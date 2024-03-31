@@ -166,21 +166,21 @@
   }
 
   .body{
-    height: 88vh;
+    height: 85vh;
   }
 
   .lower{
-    height: 80vh;
+    height: 78vh;
   }
 
   .itemDiv{
-    padding-left: 10px;
+    padding-left: 5px;
     width: 100%;
   }
 
   .itemDiv p {
     margin-left: 0px;
-    width: 250px;
+    width: 200px;
   }
 
   .itemDiv button{

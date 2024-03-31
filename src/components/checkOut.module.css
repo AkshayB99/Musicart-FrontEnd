@@ -358,4 +358,12 @@
     margin-top: 0;
     height: 5vh;
   }
+
+  .rightBodyIn2line{
+    display: none;
+  }
+
+  .rightBodyIn3{
+    margin: 0;
+  }
 }

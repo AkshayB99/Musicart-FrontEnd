@@ -228,15 +228,16 @@ function ViewItem() {
         </div>
         <div className={vCss.content2}>
           <div className={vCss.conLeft2}>
-          <Slider {...settings} className={vCss.smallImgs2}>
-            {Object.values(data?.imageUrl || {}).map((imgUrl, index) => (
-              <img
-                key={index}
-                src={imgUrl}
-                className={vCss.smallImgs2Img}
-              />
-            ))}
-          </Slider>
+            <Slider {...settings} className={vCss.smallImgs2}>
+              {Object.values(data?.imageUrl || {}).map((imgUrl, index) => (
+                <img
+                  key={index}
+                  src={imgUrl}
+                  className={vCss.smallImgs2Img}
+                  alt=""
+                />
+              ))}
+            </Slider>
           </div>
           <div className={vCss.conRight2}>
             <div className={vCss.itemName2}>
