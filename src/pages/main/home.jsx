@@ -155,7 +155,7 @@ function Home() {
       alert("cart is empty")
     }
     else{
-      navigate("/viewCart");
+      navigate("/cart");
     }
   }
 

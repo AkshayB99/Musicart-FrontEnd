@@ -60,7 +60,7 @@ function Footer() {
   };
 
   const handleCart = () => {
-    navigate("/viewCart");
+    navigate("/cart");
   };
 
   const handleInvoice = () => {
