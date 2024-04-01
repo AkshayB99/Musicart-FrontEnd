@@ -5,6 +5,7 @@ import logo from "./../../assets/logo.png";
 import bannerImg from "./../../assets/BannerImg.png";
 import Item from "../../components/itemsComp";
 import { useNavigate } from "react-router-dom";
+import ViewItem from "../../components/itemViewComp"
 
 const cookies = new Cookies();
 
@@ -65,7 +66,7 @@ function Home() {
       } catch (error) {}
     };
     fetchData();
-  }, [reloading]);
+  }, [reloading, token]);
 
   const handleSearchValue = (e) => {
     setSearch(e.target.value);
@@ -149,6 +150,15 @@ function Home() {
     }
   };
 
+  const handleClickCart = () => {
+    if(user?.cart?.length === 0){
+      alert("cart is empty")
+    }
+    else{
+      navigate("/viewCart");
+    }
+  }
+
   return (
     <>
       <div className={hCss.main}>
@@ -165,7 +175,7 @@ function Home() {
                 <div className={hCss.cart}>
                   <div
                     className={hCss.cartIn}
-                    onClick={() => navigate("/cart")}
+                    onClick={handleClickCart}
                   >
                     <span className="material-symbols-outlined">
                       shopping_cart
@@ -201,14 +211,14 @@ function Home() {
           </div>
           <div className={hCss.content}>
             <div className={hCss.searchBoxDiv}>
-            <div className={hCss.searchBox}>
-              <span className="material-symbols-outlined">search</span>
-              <input
-                type="search"
-                placeholder="Search by Product Name"
-                onChange={handleSearchValue}
-              />
-            </div>
+              <div className={hCss.searchBox}>
+                <span className="material-symbols-outlined">search</span>
+                <input
+                  type="search"
+                  placeholder="Search by Product Name"
+                  onChange={handleSearchValue}
+                />
+              </div>
             </div>
             <div className={hCss.filterBox}>
               <span
@@ -322,15 +332,27 @@ function Home() {
               </div>
             </div>
           </div>
-          <div className={hCss.subContent}>
-            {data?.map((item) => (
-              <Item
-                data={item}
-                key={item._id}
-                handleMainReload={handleMainReload}
-              />
-            ))}
-          </div>
+          {grid ? (
+            <div className={hCss.subContent}>
+              {data?.map((item) => (
+                <Item
+                  data={item}
+                  key={item._id}
+                  handleMainReload={handleMainReload}
+                />
+              ))}
+            </div>
+          ) : (
+            <div className={hCss.subContent2}>
+              {data?.map((item) => (
+                <ViewItem
+                  data={item}
+                  key={item._id}
+                  handleMainReload={handleMainReload}
+                />
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </>

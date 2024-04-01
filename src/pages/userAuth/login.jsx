@@ -9,7 +9,7 @@ const cookies = new Cookies();
 function login() {
   const navigate = useNavigate();
   const [user, setUser] = useState({
-    email: "",
+    identifier: "",
     password: "",
   });
   const [errorData, setErrorData] = useState({});
@@ -36,7 +36,6 @@ function login() {
     } catch (error) {}
   };
 
-  console.log(errorData.message);
 
   return (
     <>
@@ -52,7 +51,7 @@ function login() {
             <input
               type="text"
               id="username"
-              onChange={(e) => setUser({ ...user, email: e.target.value })}
+              onChange={(e) => setUser({ ...user, identifier: e.target.value })}
             />
           </div>
           <div>

@@ -50,12 +50,15 @@
 
   .links span {
     font-size: 30px;
+    padding: 0;
   }
+
 
   .textInner {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: #fff ;
   }
 
   .text {
