@@ -37,7 +37,7 @@ function Footer() {
       }
     };
     fetchData();
-  }, [token]);
+  }, [token, location]);
 
   const handleLogout = async () => {
     try {
@@ -60,11 +60,7 @@ function Footer() {
   };
 
   const handleCart = () => {
-    if (user?.cart?.length === 0) {
-      alert("cart is empty");
-    } else {
-      navigate("/viewCart");
-    }
+    navigate("/viewCart");
   };
 
   const handleInvoice = () => {
@@ -73,7 +69,7 @@ function Footer() {
     } else {
       navigate("/invoice");
     }
-  }
+  };
 
   return (
     <>
@@ -93,10 +89,7 @@ function Footer() {
             <span className="material-symbols-outlined" onClick={handleCart}>
               add_shopping_cart
             </span>
-            <span
-              className="material-symbols-outlined"
-              onClick={handleInvoice}
-            >
+            <span className="material-symbols-outlined" onClick={handleInvoice}>
               edit_document
             </span>
             <span className="material-symbols-outlined" onClick={handleLogout}>

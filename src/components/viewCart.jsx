@@ -42,6 +42,13 @@ function ViewCart() {
   }, [token, deleteItem]);
 
   useEffect(() => {
+    if (user?.cart?.length === 0) {
+      alert("Cart is empty");
+      navigate("/");
+    }
+  });
+
+  useEffect(() => {
     if (itemIds.length > 0) {
       const fetchDataAndItem = async () => {
         try {
